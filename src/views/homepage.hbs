@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+</head>
+<body>
+  <h1>Assignments</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Assignments</th>
+        <th>Score</th>
+        <th>Total</th>
+        <th>Completed</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each assignments}}
+      <tr>
+        <td>{{assignment}}</td>
+        <td>{{score}}</td>
+        <td>{{total}}</td>
+        <td>{{#if completed}} &#10004 {{/if}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <p>Overall Average: {{average}} </p>
+  <a href="/add-assignment">Add an assignment</a>
+</body>
+</html>
